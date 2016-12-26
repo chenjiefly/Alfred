@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.chenjiefly.myip</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>1FA640AE-B2F9-4D80-95BE-1CBEB78179B9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2A8375B8-D50B-4F0E-8CF1-2357D899E776</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>chenjiefly</string>
+	<key>description</key>
+	<string>query IP address of local machine</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>myip</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2A8375B8-D50B-4F0E-8CF1-2357D899E776</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>myip</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>正在查询...</string>
+				<key>script</key>
+				<string>##### 1、先提取MAC地址 #####
+# 执行ifconfig，并从结果中抓取包含MAC地址的文本
+info="$(ifconfig | grep 'inet.*netmask.*broadcast' -B 2)"
+
+# 抓取mac地址信息行
+mac="$(echo $info | grep 'ether.*')"
+
+# MAC地址
+ether="$(echo $mac | awk '{print $2}')"
+
+
+##### 2、再提取本机IP相关信息 #####
+
+# 执行ifconfig，并从结果中抓取包含局域网IP、子网掩码和广播地址等信息的文本
+myip="$(ifconfig | grep 'inet.*netmask.*broadcast')"
+
+# 局域网IP
+lanip="$(echo $myip | awk '{print $2}')"
+
+# 子网掩码
+netmask="$(echo $myip | awk '{print $4}')"
+
+# 广播地址IP
+broadcast="$(echo $myip | awk '{print $6}')"
+
+##### 3、向第三方请求公网IP地址 #####
+
+# 公网IP
+publicip=$(curl --silent http://icanhazip.com)
+
+
+##### 4、输出结果 #####
+echo "
+&lt;items&gt;
+    &lt;item uid = \"ether\" arg = \"$ether\"&gt;
+    		&lt;title&gt;MAC地址&lt;/title&gt;
+    		&lt;subtitle&gt;$ether&lt;/subtitle&gt;
+		&lt;icon&gt;ether.png&lt;/icon&gt;
+    &lt;/item&gt;
+    &lt;item uid = \"lanip\" arg = \"$lanip\"&gt;
+    		&lt;title&gt;局域网IP&lt;/title&gt;
+    		&lt;subtitle&gt;$lanip&lt;/subtitle&gt;
+		&lt;icon&gt;lanip.png&lt;/icon&gt;
+    &lt;/item&gt;
+	&lt;item uid = \"netmask\" arg = \"$netmask\"&gt;
+    		&lt;title&gt;子网掩码&lt;/title&gt;
+    		&lt;subtitle&gt;$netmask&lt;/subtitle&gt;
+		&lt;icon&gt;netmask.png&lt;/icon&gt;
+    &lt;/item&gt;
+	&lt;item uid = \"broadcast\" arg = \"$broadcast\"&gt;
+    		&lt;title&gt;广播地址&lt;/title&gt;
+    		&lt;subtitle&gt;$broadcast&lt;/subtitle&gt;
+		&lt;icon&gt;broadcast.png&lt;/icon&gt;
+    &lt;/item&gt;
+	&lt;item uid = \"publicip\" arg = \"$netmask\"&gt;
+    		&lt;title&gt;公网IP&lt;/title&gt;
+    		&lt;subtitle&gt;$publicip&lt;/subtitle&gt;
+		&lt;icon&gt;publicip.png&lt;/icon&gt;
+    &lt;/item&gt;
+&lt;/items&gt;
+"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>查询本机局域网、公网和子网掩码等网络信息</string>
+				<key>title</key>
+				<string>查询本机IP</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1FA640AE-B2F9-4D80-95BE-1CBEB78179B9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Keywords are one of Alfred's most commonly used and most useful ways of launching actions. Set a keyword and connect it to the action(s) you want to perform.
+
+Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
+	<key>uidata</key>
+	<dict>
+		<key>1FA640AE-B2F9-4D80-95BE-1CBEB78179B9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>2A8375B8-D50B-4F0E-8CF1-2357D899E776</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/chenjiefly</string>
+</dict>
+</plist>
