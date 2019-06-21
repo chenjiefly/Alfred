@@ -105,15 +105,15 @@ publicip=$(curl --silent http://icanhazip.com)
 ##### 4、输出结果 #####
 echo "
 &lt;items&gt;
-    &lt;item uid = \"ether\" arg = \"$ether\"&gt;
-    		&lt;title&gt;MAC地址&lt;/title&gt;
-    		&lt;subtitle&gt;$ether&lt;/subtitle&gt;
-		&lt;icon&gt;ether.png&lt;/icon&gt;
-    &lt;/item&gt;
     &lt;item uid = \"lanip\" arg = \"$lanip\"&gt;
     		&lt;title&gt;局域网IP&lt;/title&gt;
     		&lt;subtitle&gt;$lanip&lt;/subtitle&gt;
 		&lt;icon&gt;lanip.png&lt;/icon&gt;
+    &lt;/item&gt;
+    &lt;item uid = \"ether\" arg = \"$ether\"&gt;
+    		&lt;title&gt;MAC地址&lt;/title&gt;
+    		&lt;subtitle&gt;$ether&lt;/subtitle&gt;
+		&lt;icon&gt;ether.png&lt;/icon&gt;
     &lt;/item&gt;
 	&lt;item uid = \"netmask\" arg = \"$netmask\"&gt;
     		&lt;title&gt;子网掩码&lt;/title&gt;

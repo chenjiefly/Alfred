@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>chenkehxx</string>
 	<key>category</key>
-	<string>Tools</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>FF8E3BE3-2E94-4801-8A01-9AA8DE17340B</key>
@@ -32,6 +32,33 @@
 	<string>terminal</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>95</integer>
+				<key>script</key>
+				<string>set query to "{query}"
+set cd to "cd "
+tell application "Terminal"
+	do script cd &amp; query
+	activateend tell</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1F14D519-4BE4-4435-AEF8-64F167DA7ED2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -91,33 +118,6 @@
 			<string>FF8E3BE3-2E94-4801-8A01-9AA8DE17340B</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>95</integer>
-				<key>script</key>
-				<string>set query to "{query}"
-set cd to "cd "
-tell application "Terminal"
-	do script cd &amp; query
-	activateend tell</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1F14D519-4BE4-4435-AEF8-64F167DA7ED2</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>

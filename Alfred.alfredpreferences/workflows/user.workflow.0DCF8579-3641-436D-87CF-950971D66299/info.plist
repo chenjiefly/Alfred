@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.apple.alfred2.workflow.resizeimage</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>16F50928-BDC7-4B37-AFE5-136487D8A62C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5CB510DB-D353-4AF8-89FE-F89C01EA46D6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5CB510DB-D353-4AF8-89FE-F89C01EA46D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5141C668-6EBD-497A-AF23-8034377E6466</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>66F406E0-259F-4227-8467-EF43BA80321C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5CB510DB-D353-4AF8-89FE-F89C01EA46D6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Acidham</string>
+	<key>description</key>
+	<string>Resize an image to width and respect ratio</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Resize Image</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Resize Image</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>5141C668-6EBD-497A-AF23-8034377E6466</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>16F50928-BDC7-4B37-AFE5-136487D8A62C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(target_width)
+
+	-- try to get a jpg or png
+	try
+		-- get selected file in finder and read the POSIX Path		tell application "Finder"			set this_file to get selection			set myPath to POSIX path of (this_file as text)		end tell				tell application "Image Events"			-- open the image file			set this_image to open myPath			-- get dimensions of the image			copy dimensions of this_image to {W, H}			-- calculate scale factor with given width and scale the image			set scale_factor to target_width / W			scale this_image by factor scale_factor			save this_image in myPath			close this_image
+			-- get new image width and height for output			set new_W to round (W * scale_factor) rounding as taught in school			set new_H to round (H * scale_factor) rounding as taught in school			set new_size to new_W &amp; " x " &amp; new_H		end tell		set the_return to (W &amp; " x " &amp; H &amp; " → " &amp; new_size) as text		return the_return	on error errStr number errorNumber		return "No image file found!"	end tryend alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>5CB510DB-D353-4AF8-89FE-F89C01EA46D6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>rimg</string>
+				<key>subtext</key>
+				<string>Resize image to width of {query} px</string>
+				<key>text</key>
+				<string>Enter target image width</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>66F406E0-259F-4227-8467-EF43BA80321C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This workflow is based on "Open with Sublime Text 2" by Franz Heidl
+www.franzheidl.de
+
+Icon by Cole Bemis
+License: Creative Commons (Attribution 3.0 Unported) 
+www.iconfinder.com/icons/227574/open_icon
+
+====
+
+Open selected file on any program. This is basically a shortcut to Alfred's "Open with..." command using a hotkey instead of navigating through Alfred's menu.
+
+Usage:
+Assign a Hotkey or use the activation keyword (openwith), select a file on Finder and choose an app to open the file.
+
+Note for homebrew-cask users:
+File filter doesn't recognize the aliases under ~/Applications/, that's why /opt/homebrew-cask-Caskroom/ is added.</string>
+	<key>uidata</key>
+	<dict>
+		<key>16F50928-BDC7-4B37-AFE5-136487D8A62C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<real>30</real>
+		</dict>
+		<key>5141C668-6EBD-497A-AF23-8034377E6466</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>5CB510DB-D353-4AF8-89FE-F89C01EA46D6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>150</real>
+		</dict>
+		<key>66F406E0-259F-4227-8467-EF43BA80321C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>270</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

@@ -1,0 +1,38 @@
+{
+  "name": "alfred-comment",
+  "version": "0.0.0",
+  "description": "程序代码注释",
+  "license": "MIT",
+  "repository": "chenjiefly/alfred-comment",
+  "author": {
+    "name": "cj85996",
+    "email": "cj85996@alibaba-inc.com",
+    "url": "github.com/chenjiefly"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "ava": "^0.18.0",
+    "xo": "^0.17.0"
+  }
+}

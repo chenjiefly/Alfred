@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>defaultBundleId</key>
-	<string>com.alfred.workflow.chenjiefly.name</string>
+	<string>com.chenjiefly.name</string>
 	<key>defaultCreatedBy</key>
 	<string>chenjiefly</string>
 	<key>defaultWebsite</key>

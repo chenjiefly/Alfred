@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -33,12 +35,14 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>yd</string>
+				<string>y</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -57,6 +61,10 @@ $translate = new Translate();
 $translate-&gt;getTranslation('{query}');
 
 </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>请输入翻译内容</string>
 				<key>title</key>
@@ -71,12 +79,16 @@ $translate-&gt;getTranslation('{query}');
 			<key>uid</key>
 			<string>5EB7D1DA-4576-4D69-9B82-F6B3E4D785EA</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+				<key>transient</key>
 				<false/>
 			</dict>
 			<key>type</key>
@@ -84,7 +96,7 @@ $translate-&gt;getTranslation('{query}');
 			<key>uid</key>
 			<string>903468CF-6A26-4DB2-B74D-BA10E1A3F11D</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -93,11 +105,15 @@ $translate-&gt;getTranslation('{query}');
 	<dict>
 		<key>5EB7D1DA-4576-4D69-9B82-F6B3E4D785EA</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
 		<key>903468CF-6A26-4DB2-B74D-BA10E1A3F11D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>

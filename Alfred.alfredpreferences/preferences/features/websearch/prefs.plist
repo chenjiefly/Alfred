@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>32BA1542-C513-4870-937A-A616172A4A1A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>aone</string>
+			<key>text</key>
+			<string>在aone中查找“{query}”</string>
+			<key>url</key>
+			<string>https://lstops.alibaba-inc.com/appListRedirect?appName={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>422416CB-AA12-4103-AC8C-4E163D621400</key>
 		<dict>
 			<key>enabled</key>
@@ -86,6 +99,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>9072F22D-9979-419A-89C7-D9E372EE7B20</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>tnpmd</string>
+			<key>text</key>
+			<string>Search AliNpm Detail for '{query}'</string>
+			<key>url</key>
+			<string>http://web.npm.alibaba-inc.com/package/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>9493E7BD-D11B-498A-8882-FEB38C7B653F</key>
 		<dict>
 			<key>enabled</key>
@@ -101,10 +127,23 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
-		<key>B648A3DD-14D6-4933-B09D-85CB761EBED9</key>
+		<key>A53B438A-F528-4B98-AF24-2BF7D152371F</key>
 		<dict>
 			<key>enabled</key>
 			<true/>
+			<key>keyword</key>
+			<string>gl</string>
+			<key>text</key>
+			<string>gitlab项目搜索</string>
+			<key>url</key>
+			<string>http://gitlab.alibaba-inc.com/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>B648A3DD-14D6-4933-B09D-85CB761EBED9</key>
+		<dict>
+			<key>enabled</key>
+			<false/>
 			<key>keyword</key>
 			<string>sp</string>
 			<key>text</key>

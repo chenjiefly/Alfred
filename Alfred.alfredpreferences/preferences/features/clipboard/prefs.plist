@@ -2,7 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>fastAppend</key>
+	<true/>
+	<key>fastAppendBackToClipboard</key>
+	<true/>
+	<key>fastAppendSeparator</key>
+	<integer>1</integer>
+	<key>limit</key>
+	<integer>2</integer>
 	<key>persistFor</key>
 	<integer>0</integer>
+	<key>viewerKeyword</key>
+	<string>cl</string>
 </dict>
 </plist>
