@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>0BACEF5D-B372-473B-BA8B-36E108351B72</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>glu</string>
+			<key>text</key>
+			<string>gitlab用户搜索</string>
+			<key>url</key>
+			<string>http://gitlab.alibaba-inc.com/u/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>32BA1542-C513-4870-937A-A616172A4A1A</key>
 		<dict>
 			<key>enabled</key>
@@ -106,9 +119,9 @@
 			<key>keyword</key>
 			<string>tnpmd</string>
 			<key>text</key>
-			<string>Search AliNpm Detail for '{query}'</string>
+			<string>Search AliNpm Detail for '{query}', 参数示例"包名/版本号"</string>
 			<key>url</key>
-			<string>http://web.npm.alibaba-inc.com/package/{query}</string>
+			<string>https://registry.npm.alibaba-inc.com/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -118,12 +131,10 @@
 			<true/>
 			<key>keyword</key>
 			<string>tnpm</string>
-			<key>plusSpaces</key>
-			<false/>
 			<key>text</key>
 			<string>Search AliNpm for '{query}'</string>
 			<key>url</key>
-			<string>http://web.npm.alibaba-inc.com/package/{query}</string>
+			<string>https://anpm.alibaba-inc.com/package/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -181,6 +192,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>E2DB55B0-CA86-48D6-93C7-928B41874D0F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sunfire</string>
+			<key>text</key>
+			<string>查看“{query}”机器在sunfire平台上的运行监控情况</string>
+			<key>url</key>
+			<string>https://sunfire.alibaba-inc.com/application/appmonitor/{query}/monitor/basic</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>E783F8F5-3C84-4BE2-B8CA-72D521B333D7</key>
 		<dict>
 			<key>enabled</key>
@@ -193,21 +217,6 @@
 			<string>在1688全站detail中搜索offerId={query}</string>
 			<key>url</key>
 			<string>https://detail.1688.com/offer/{query}.html</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>ECA54F2F-21F1-430C-B31C-D876730010F1</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>jqbug</string>
-			<key>plusSpaces</key>
-			<false/>
-			<key>text</key>
-			<string>在jQuery的bug列表中查询#{query}</string>
-			<key>url</key>
-			<string>https://bugs.jquery.com/ticket/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -240,7 +249,5 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>onlyShowEnabledInPrefs</key>
-	<true/>
 </dict>
 </plist>

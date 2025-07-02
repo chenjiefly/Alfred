@@ -1,0 +1,10 @@
+2021-09-29 10:52:47,340 - ERROR - workPersonInfo.getPhone exception  : Traceback (most recent call last):
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/work/workPersonInfo.py", line 59, in getPhone
+    monileZone = mobile['mobileZone'].strip()
+KeyError: 'mobileZone'
+
+2021-09-29 10:52:47,345 - ERROR - workPersonInfo.getSupervisor exception  : Traceback (most recent call last):
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/work/workPersonInfo.py", line 94, in getSupervisor
+    return  content['dataSource']['ActiveStaffJobs'][0]['supervisorList'][0]['nickName']
+KeyError: 'nickName'
+

@@ -2,12 +2,13 @@ Software:
 
     System Software Overview:
 
-      System Version: OS X 10.11 (15A284)
-      Kernel Version: Darwin 15.0.0
-      Boot Volume: Macintosh HD
+      System Version: macOS 10.15.5 (19F101)
+      Kernel Version: Darwin 19.5.0
+      Boot Volume: MacintoshHD
       Boot Mode: Normal
-      Computer Name: chenjie的MacBook Pro
-      User Name: chenjie (chenjie)
+      Computer Name: chenjie的Macbook Pro16
+      User Name: 陈杰 (chenjie)
       Secure Virtual Memory: Enabled
-      Time since boot: 3 days 9:30
+      System Integrity Protection: Enabled
+      Time since boot: 10 days 6:55
 

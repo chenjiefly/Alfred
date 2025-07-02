@@ -1,0 +1,27 @@
+2024-06-28 09:42:01,372 - ERROR - main.exception: [u'work.workSearch.py', u''] : Traceback (most recent call last):
+  File "main.py", line 26, in entrance
+    data = module.getData(searchStr=searchStr, wf=wf)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/work/workSearch.py", line 40, in getData
+    return wf.cached_data('$___work_'+searchStr,lambda :getWorkSearchData(searchStr),max_age=86400)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/workflow/workflow3.py", line 659, in cached_data
+    return super(Workflow3, self).cached_data(name, data_func, max_age)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/workflow/workflow.py", line 1701, in cached_data
+    data = data_func()
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/work/workSearch.py", line 40, in <lambda>
+    return wf.cached_data('$___work_'+searchStr,lambda :getWorkSearchData(searchStr),max_age=86400)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/work/workSearch.py", line 18, in getWorkSearchData
+    res = httpUtil.get(url,mainUrl,params,isLoginInvalidate=isLoginInvalidate,tryLogin=tryLogin)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/utils/httpUtil.py", line 11, in get
+    res = callWithLogin(url,mainUrl,getInvock,params,None,isRepeat,isLoginInvalidate,tryLogin)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/utils/httpUtil.py", line 48, in callWithLogin
+    res = invoke(url,mainUrl,callMethod,params,getHeader)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/utils/httpUtil.py", line 57, in invoke
+    cookies = cookieUtil.get(mainUrl)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/utils/cookieUtil.py", line 12, in get
+    cookies = get_from_chrome(url)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/utils/cookieUtil.py", line 48, in get_from_chrome
+    return chrome_cookies(url)
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/pycookiecheat/pycookiecheat.py", line 133, in chrome_cookies
+    conn = sqlite3.connect(cookie_file)
+DatabaseError: authorization denied
+

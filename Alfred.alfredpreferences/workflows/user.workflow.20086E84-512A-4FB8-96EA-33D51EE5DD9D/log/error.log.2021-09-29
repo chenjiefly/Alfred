@@ -1,0 +1,5 @@
+2021-10-11 09:23:58,600 - ERROR - workPersonInfo.getPhone exception  : Traceback (most recent call last):
+  File "/Users/chenjie/sync/Alfred/Alfred.alfredpreferences/workflows/user.workflow.20086E84-512A-4FB8-96EA-33D51EE5DD9D/aliProductivity/work/workPersonInfo.py", line 59, in getPhone
+    monileZone = mobile['mobileZone'].strip()
+KeyError: 'mobileZone'
+

@@ -101,7 +101,7 @@
 	<key>description</key>
 	<string>BaiduSearch</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>百度搜索</string>
 	<key>objects</key>
