@@ -13,7 +13,7 @@
 	<key>description</key>
 	<string>Weather forecast using Baidu API</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Baidu Weather</string>
 	<key>objects</key>

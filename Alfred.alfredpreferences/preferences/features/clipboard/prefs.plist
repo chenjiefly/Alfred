@@ -9,7 +9,9 @@
 	<key>limit</key>
 	<integer>2</integer>
 	<key>persistFor</key>
-	<integer>0</integer>
+	<integer>2</integer>
+	<key>persistForImages</key>
+	<integer>2</integer>
 	<key>viewerKeyword</key>
 	<string>cl</string>
 </dict>
