@@ -25,8 +25,8 @@ module.exports = {
     youDaoApi: 'https://openapi.youdao.com/api',
     getParams: function () {
         const query = alfy.input;
-        const appKey = '773a7c9fba06170a';
-        const appSecret = 'zmA9G2pciKaqMehI3CbucCdSYXro9Sl8';
+        const appKey = process.env.appKey;
+        const appSecret = process.env.appSecret;
         const salt = (new Date).getTime();
         const curtime = Math.round(new Date().getTime() / 1000);
         const str = appKey + truncate(query) + salt + curtime + appSecret;
@@ -42,22 +42,6 @@ module.exports = {
             signType: 'v3',
             curtime: curtime,
         };
-        return {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            json: {
-                q: query,
-                appKey: appKey,
-                salt: salt,
-                from: 'zh-CHS',
-                to: 'EN',
-                sign: sign,
-                signType: 'v3',
-                curtime: curtime,
-            }
-        }
     },
     filter: {
         prep: [

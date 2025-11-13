@@ -64,7 +64,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Xudaolong</string>
+	<string>chenjiefly</string>
 	<key>description</key>
 	<string>翻译</string>
 	<key>disabled</key>
@@ -290,7 +290,29 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string># 配置有道 KEYS
+
+由于有道翻译 api 迁移到了有道智云，所以需要去有道智云进行注册然后创建应用。
+
+步骤如下:
+
+1.注册有道智云帐号
+
+  https://ai.youdao.com/
+
+2. 创建一个自然语言翻译服务
+
+  https://ai.youdao.com/fanyi-services.s
+
+3. 创建一个应用并绑定第二步创建的服务
+
+  https://ai.youdao.com/appmgr.s
+
+4. 这样就可以获得应用(appKey)和密钥(secret)了
+
+  应用详情 - 应用ID appKey, 应用密钥 secret
+
+5. 把变量填入 workflow 右上角的 [X] 点开后的配置框中</string>
 	<key>uidata</key>
 	<dict>
 		<key>0A329E4B-AB21-41F7-A869-D878DF4EAE92</key>
@@ -329,7 +351,21 @@
 			<integer>350</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>appKey</key>
+		<string>773a7c9fba06170a</string>
+		<key>appSecret</key>
+		<string>zmA9G2pciKaqMehI3CbucCdSYXro9Sl8</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>appSecret</string>
+		<string>appKey</string>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/xudaolong/CodeVar</string>
+	<string>https://github.com/chenjiefly/Alfred</string>
 </dict>
 </plist>
