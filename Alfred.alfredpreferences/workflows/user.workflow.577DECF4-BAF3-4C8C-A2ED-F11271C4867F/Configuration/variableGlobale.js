@@ -11,86 +11,51 @@
 
 'use strict';
 
+const CryptoJS = require('crypto-js');
 const alfy = require('alfy');
-const sample = require('lodash.sample');
 
-// 此 key 全采集于 github 上面 若有冒犯就先谢罪了啊哈...
-const FIXED_KEY = [
-    {
-        keyfrom: 'CoderVar',
-        key: '802458398'
-    },
-    {
-        keyfrom: 'whatMean',
-        key: '1933652137'
-    },
-    {
-        keyfrom: 'chinacache',
-        key: '1247577973'
-    },
-    {
-        keyfrom: 'huipblog',
-        key: '439918742'
-    },
-    {
-        keyfrom: 'chinacache',
-        key: '1247577973'
-    },
-    {
-        keyfrom: 'fanyi-node',
-        key: '593554388'
-    },
-    {
-        keyfrom: 'wbinglee',
-        key: '1127870837'
-    },
-    {
-        keyfrom: 'forum3',
-        key: '1268771022'
-    },
-    {
-        keyfrom: 'node-translator',
-        key: '2058911035'
-    },
-    {
-        keyfrom: 'kaiyao-robot',
-        key: '2016811247'
-    },
-    {
-        keyfrom: 'stone2083',
-        key: '1576383390'
-    },
-    {
-        keyfrom: 'myWebsite',
-        key: '423366321'
-    },
-    {
-        keyfrom: 'leecade',
-        key: '54015339'
-    },
-    {
-        keyfrom: 'github-wdict',
-        key: '619541059'
-    },
-    {
-        keyfrom: 'lanyuejin',
-        key: '2033774719'
-    },
-];
+function truncate(q) {
+    const len = q.length;
+    if(len <= 20) return q;
+
+    return q.substring(0, 10) + len + q.substring(len - 10, len);
+}
 
 module.exports = {
-    youDaoApi: 'http://fanyi.youdao.com/openapi.do',
+    youDaoApi: 'https://openapi.youdao.com/api',
     getParams: function () {
-        let selected = sample(FIXED_KEY);
-        return {
-            query: {
-                keyfrom: selected.keyfrom,
-                key: selected.key,
-                type: 'data',
-                doctype: 'json',
-                version: '1.1',
-                q: alfy.input
+        const query = alfy.input;
+        const appKey = '773a7c9fba06170a';
+        const appSecret = 'zmA9G2pciKaqMehI3CbucCdSYXro9Sl8';
+        const salt = (new Date).getTime();
+        const curtime = Math.round(new Date().getTime() / 1000);
+        const str = appKey + truncate(query) + salt + curtime + appSecret;
+        const sign = CryptoJS.SHA256(str).toString(CryptoJS.enc.Hex);
 
+        return {
+            q: query,
+            appKey: appKey,
+            salt: salt,
+            from: 'zh-CHS',
+            to: 'en',
+            sign: sign,
+            signType: 'v3',
+            curtime: curtime,
+        };
+        return {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            json: {
+                q: query,
+                appKey: appKey,
+                salt: salt,
+                from: 'zh-CHS',
+                to: 'EN',
+                sign: sign,
+                signType: 'v3',
+                curtime: curtime,
             }
         }
     },

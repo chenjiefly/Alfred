@@ -12,11 +12,12 @@
 'use strict';
 
 const alfy = require('alfy');
+const qs = require('qs');
 const filter = require('./variableFilter.js');
 
 module.exports = {
     core: function (api, params, style) {
-        alfy.fetch(api, params).then(result => {
+        alfy.fetch(`${api}?${qs.stringify(params)}`).then(result => {
             if (result.errorCode == 0) {
                 //结果
                 let result_value = [];
@@ -33,21 +34,25 @@ module.exports = {
                         });
                     }
                 }
-                // 网络翻译 : web
-                if (result.web) {
-                    let result_web = result.web;
-                    for (let i = 0, len = result_web.length; i < len; i++) {
-                        for (let j = 0, ilen = result_web[i].value.length; j < ilen; j++) {
-                            if (reg.test(result_web[i].value[j])) {
-                                result_value.push({
-                                    title: style(result_web[i].value[j]),
-                                    subtitle: `网络翻译 => ${result_web[i].value[j]}`,
-                                    arg: style(result_web[i].value[j]),
-                                });
-                            }
-                        }
-                    }
-                }
+                // // 网络翻译 : web
+                // if (result.web) {
+                //     let result_web = result.web;
+                //     for (let i = 0, len = result_web.length; i < len; i++) {
+                //         for (let j = 0, ilen = result_web[i].value.length; j < ilen; j++) {
+                //             if (reg.test(result_web[i].value[j])) {
+                //                 result_value.push({
+                //                     title: style(result_web[i].value[j]),
+                //                     subtitle: `网络翻译 => ${result_web[i].value[j]}`,
+                //                     arg: style(result_web[i].value[j]),
+                //                 });
+                //             }
+                //         }
+                //     }
+                // }
+
+                console.log('alfy.fetch---------------------->', result_value);
+                console.log('alfy.fetch---------------------->end');
+
                 alfy.output(result_value);
             } else {
                 alfy.output([{
