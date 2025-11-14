@@ -48,6 +48,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>logo</string>
+				<key>subtext</key>
+				<string>输入文字生成图标logo</string>
+				<key>text</key>
+				<string>logo生成工具</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9059D416-D714-47FD-AD1D-C02408247B95</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -69,27 +90,6 @@
 			<string>A1B1EE40-8724-43CB-9948-2A5D375ED6F6</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>logo</string>
-				<key>subtext</key>
-				<string>输入文字生成图标logo</string>
-				<key>text</key>
-				<string>logo生成工具</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>9059D416-D714-47FD-AD1D-C02408247B95</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -137,6 +137,10 @@
 			<integer>260</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://git@github.com/chenjiefly/Alfred.git
 https://git@github.com/chenjiefly/Alfred.git
