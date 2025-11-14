@@ -8,7 +8,20 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>3CBA983A-007D-49C4-ACAC-0D796856B935</key>
+		<key>9059D416-D714-47FD-AD1D-C02408247B95</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1B1EE40-8724-43CB-9948-2A5D375ED6F6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A1B1EE40-8724-43CB-9948-2A5D375ED6F6</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -35,6 +48,52 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># index.js文件存在于点击下方“cancel”按钮左侧的田字型按钮后打开的目录中
+# 可以使用alfy脚手架来自动生成
+/usr/local/bin/node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A1B1EE40-8724-43CB-9948-2A5D375ED6F6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>logo</string>
+				<key>subtext</key>
+				<string>输入文字生成图标logo</string>
+				<key>text</key>
+				<string>logo生成工具</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9059D416-D714-47FD-AD1D-C02408247B95</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -51,75 +110,31 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>logo</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>正在查询......</string>
-				<key>script</key>
-				<string># index.js文件存在于点击下方“cancel”按钮左侧的田字型按钮后打开的目录中
-# 可以使用alfy脚手架来自动生成
-/usr/local/bin/node index.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>index.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>陈杰的信息</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>3CBA983A-007D-49C4-ACAC-0D796856B935</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>3CBA983A-007D-49C4-ACAC-0D796856B935</key>
-		<dict>
-			<key>xpos</key>
-			<integer>100</integer>
-			<key>ypos</key>
-			<integer>360</integer>
-		</dict>
 		<key>47C6ABEF-3C2D-41E5-B663-1BAF4527E9B9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>360</integer>
+			<integer>260</integer>
+		</dict>
+		<key>9059D416-D714-47FD-AD1D-C02408247B95</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>A1B1EE40-8724-43CB-9948-2A5D375ED6F6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>260</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
