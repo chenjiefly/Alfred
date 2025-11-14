@@ -1,6 +1,6 @@
 {
   "name": "alfred-timestamp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "时间戳转换工具",
   "license": "MIT",
   "repository": "chenjiefly/alfred-timestamp",
