@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>03803790-E02E-4F54-BF59-11612EC80977</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>code</string>
+			<key>text</key>
+			<string>在code查找“{query}”</string>
+			<key>url</key>
+			<string>https://code.alibaba-inc.com/dashboard/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>0BACEF5D-B372-473B-BA8B-36E108351B72</key>
 		<dict>
 			<key>enabled</key>
@@ -14,6 +27,19 @@
 			<string>gitlab用户搜索</string>
 			<key>url</key>
 			<string>http://gitlab.alibaba-inc.com/u/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>302EF986-E3EA-490F-B2C9-4A6746CC31FE</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>nana</string>
+			<key>text</key>
+			<string>NaNa说美股</string>
+			<key>url</key>
+			<string>https://www.youtube.com/@NaNaShuoMeiGu</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -43,14 +69,25 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>5830CE1D-D63F-4AE1-AF48-A1F5C1F8F4F6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>david</string>
+			<key>text</key>
+			<string>David美股解读</string>
+			<key>url</key>
+			<string>https://www.youtube.com/@David_analyze_stock</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>59CB096C-51A5-4FB0-B0A4-2EFD3B3AA9B1</key>
 		<dict>
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>github</string>
-			<key>plusSpaces</key>
-			<false/>
+			<string>gh</string>
 			<key>text</key>
 			<string>search github for "{query}"</string>
 			<key>url</key>
@@ -89,9 +126,7 @@
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>zhihu</string>
-			<key>plusSpaces</key>
-			<false/>
+			<string>zh</string>
 			<key>text</key>
 			<string>在知乎上查找“{query}”</string>
 			<key>url</key>
@@ -167,11 +202,9 @@
 		<key>D73DBFF2-E844-4773-9022-1D57EEC7976C</key>
 		<dict>
 			<key>enabled</key>
-			<false/>
+			<true/>
 			<key>keyword</key>
-			<string>youdao</string>
-			<key>plusSpaces</key>
-			<false/>
+			<string>yd</string>
 			<key>text</key>
 			<string>在有道搜索“{query}”</string>
 			<key>url</key>
@@ -202,36 +235,6 @@
 			<string>查看“{query}”机器在sunfire平台上的运行监控情况</string>
 			<key>url</key>
 			<string>https://sunfire.alibaba-inc.com/application/appmonitor/{query}/monitor/basic</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>E783F8F5-3C84-4BE2-B8CA-72D521B333D7</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>detail</string>
-			<key>plusSpaces</key>
-			<false/>
-			<key>text</key>
-			<string>在1688全站detail中搜索offerId={query}</string>
-			<key>url</key>
-			<string>https://detail.1688.com/offer/{query}.html</string>
-			<key>utf8</key>
-			<true/>
-		</dict>
-		<key>F9A76C7D-26D9-479C-8E9C-DAA53CB468E2</key>
-		<dict>
-			<key>enabled</key>
-			<true/>
-			<key>keyword</key>
-			<string>wing</string>
-			<key>plusSpaces</key>
-			<false/>
-			<key>text</key>
-			<string>{query}的wing调试地址</string>
-			<key>url</key>
-			<string>http://{query}.wapa.taobao.com:10000/{query}/page/index.html</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

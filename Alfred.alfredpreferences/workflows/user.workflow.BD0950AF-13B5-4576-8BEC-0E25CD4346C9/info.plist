@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.chenjiefly.comment</string>
+	<string>com.chenjiefly.timestamp</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>CE6E4BFC-398A-4896-BB17-2B9C68D5A830</key>
+		<key>F4B10468-0C5E-4198-9391-21D11D8467B8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>12D11F2A-3D74-4055-99A9-D228A6A991F1</string>
+				<string>E167FF6D-09D8-4DAA-85AE-7B31024A3FA6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -23,15 +23,64 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>chenjiefly</string>
 	<key>description</key>
-	<string></string>
+	<string>时间戳转换工具</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>comment</string>
+	<string>timestamp</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ts</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>index.js</string>
+				<key>subtext</key>
+				<string>Update available: 0.0.0 → 1.0.2. Run `npm install -g alfred-timestamp`</string>
+				<key>title</key>
+				<string>时间戳转换工具</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F4B10468-0C5E-4198-9391-21D11D8467B8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -47,58 +96,7 @@
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>12D11F2A-3D74-4055-99A9-D228A6A991F1</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>comment</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>正在搜索......</string>
-				<key>script</key>
-				<string># index.js文件存在于点击下方“cancel”按钮左侧的田字型按钮后打开的目录中
-# 可以使用alfy脚手架来自动生成
-/usr/local/bin/node index.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>index.js</string>
-				<key>subtext</key>
-				<string>无关键字列出所有；可中文首拼作关键字过滤，</string>
-				<key>title</key>
-				<string>程序代码注释</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>CE6E4BFC-398A-4896-BB17-2B9C68D5A830</string>
+			<string>E167FF6D-09D8-4DAA-85AE-7B31024A3FA6</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -107,22 +105,26 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>12D11F2A-3D74-4055-99A9-D228A6A991F1</key>
+		<key>E167FF6D-09D8-4DAA-85AE-7B31024A3FA6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>470</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>235</integer>
 		</dict>
-		<key>CE6E4BFC-398A-4896-BB17-2B9C68D5A830</key>
+		<key>F4B10468-0C5E-4198-9391-21D11D8467B8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>235</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/chenjiefly/Alfred</string>
 </dict>
 </plist>

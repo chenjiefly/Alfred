@@ -66,7 +66,7 @@
 	<key>description</key>
 	<string>Open files or folders in Visual Studio Code.</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Visual Studio Code</string>
 	<key>objects</key>
@@ -75,7 +75,7 @@
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<true/>
+				<integer>1</integer>
 				<key>filetypes</key>
 				<array/>
 				<key>name</key>
@@ -265,10 +265,14 @@ end alfred_script</string>
 				<false/>
 				<key>keyword</key>
 				<string>code*</string>
+				<key>limit</key>
+				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
 				<array/>
+				<key>sortmode</key>
+				<integer>0</integer>
 				<key>subtext</key>
 				<string>Find files and folders and open in Visual Studio Code</string>
 				<key>title</key>
@@ -283,7 +287,7 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>23DEA358-A623-4725-95B2-79C207AF4556</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
