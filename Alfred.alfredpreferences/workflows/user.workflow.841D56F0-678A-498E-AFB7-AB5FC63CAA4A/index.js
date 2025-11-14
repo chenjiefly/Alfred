@@ -12,11 +12,20 @@ const list = [
 		label: '域账号',
 		value: 'cj85996',
 	}, {
-		label: '域邮箱集团',
+		label: '域邮箱-集团',
 		value: 'cj85996@alibaba-inc.com',
 	}, {
-		label: '域邮箱淘宝',
+		label: '域邮箱-淘宝',
 		value: 'cj85996@taobao.com',
+	}, {
+		label: '阿里云邮箱',
+		value: 'ichenjie@aliyun.com',
+	}, {
+		label: '网易163邮箱',
+		value: 'chenjiefly@163.com',
+	}, {
+		label: '网易yeah邮箱',
+		value: 'ichenjie@yeah.net',
 	},
 ];
 

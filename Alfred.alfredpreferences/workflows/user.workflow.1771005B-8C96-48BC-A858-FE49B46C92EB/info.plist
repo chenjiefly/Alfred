@@ -37,6 +37,12 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -73,7 +79,7 @@
 			<key>uid</key>
 			<string>D50691E9-0CF9-4F3A-9E0F-88E8D38AB7AB</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -82,6 +88,8 @@
 				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -90,7 +98,7 @@
 			<key>uid</key>
 			<string>BA18B23D-8FB3-4877-9986-8E4554568EC1</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -100,16 +108,16 @@
 		<key>BA18B23D-8FB3-4877-9986-8E4554568EC1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<integer>465</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>240</integer>
 		</dict>
 		<key>D50691E9-0CF9-4F3A-9E0F-88E8D38AB7AB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>210</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>240</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
