@@ -48,21 +48,39 @@ function isTimeString(input) {
     return regex.test(input.trim());
 }
 
-const input = alfy.input.trim();
+const input = alfy.input || '';
+const trimmedInput = input.trim();
 let results = [];
 
-if (!input) {
+if (input === ' ') {
+    // 当输入为空格时，显示当前时间戳和格式化时间
+    const now = Date.now();
+    const nowString = formatTimestamp(now);
+    const nowSeconds = Math.floor(now / 1000);
+    
+    results.push({
+        title: now.toString(),
+        subtitle: '当前时间戳 (毫秒级)',
+        arg: now.toString(),
+    });
+    
+    results.push({
+        title: nowString,
+        subtitle: '当前时间 (YYYY-MM-DD HH:mm:SS)',
+        arg: nowString,
+    });
+} else if (!trimmedInput) {
     results.push({
         title: '时间转换工具',
-        subtitle: '请输入时间戳或 YYYY-MM-DD HH:mm:SS 格式的时间字符串',
+        subtitle: '请输入时间戳或 YYYY-MM-DD HH:mm:SS 格式的时间字符串，或输入空格查看当前时间',
         arg: '',
     });
-} else if (isTimestamp(input)) {
+} else if (isTimestamp(trimmedInput)) {
     // 输入是时间戳，转换为时间字符串
-    let timestamp = parseInt(input);
+    let timestamp = parseInt(trimmedInput);
     
     // 如果是10位时间戳（秒级），转换为13位（毫秒级）
-    if (input.length === 10) {
+    if (trimmedInput.length === 10) {
         timestamp = timestamp * 1000;
     }
     
@@ -71,7 +89,7 @@ if (!input) {
     if (timeString) {
         results.push({
             title: timeString,
-            subtitle: `时间戳 ${input} 转换为时间字符串`,
+            subtitle: `时间戳 ${trimmedInput} 转换为时间字符串`,
             arg: timeString,
         });
         
@@ -90,9 +108,9 @@ if (!input) {
             arg: '',
         });
     }
-} else if (isTimeString(input)) {
+} else if (isTimeString(trimmedInput)) {
     // 输入是时间字符串，转换为时间戳
-    const timestamp = parseTimeString(input);
+    const timestamp = parseTimeString(trimmedInput);
     
     if (timestamp !== null) {
         const timestampSeconds = Math.floor(timestamp / 1000);
