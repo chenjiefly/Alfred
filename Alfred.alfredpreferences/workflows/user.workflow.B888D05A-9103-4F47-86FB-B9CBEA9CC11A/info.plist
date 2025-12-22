@@ -458,10 +458,7 @@ afplay "$voice"</string>
 		<string>zmA9G2pciKaqMehI3CbucCdSYXro9Sl8</string>
 	</dict>
 	<key>variablesdontexport</key>
-	<array>
-		<string>key</string>
-		<string>secret</string>
-	</array>
+	<array/>
 	<key>version</key>
 	<string>2.7.0</string>
 	<key>webaddress</key>
